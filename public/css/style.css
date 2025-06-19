@@ -1,0 +1,52 @@
+<style>
+body {
+  font-family: sans-serif;
+  background: #f5f5f5;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  border: 2px solid black;
+  background: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button.active {
+  background: black;
+  color: white;
+}
+
+.week-group {
+  margin-bottom: 30px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.program-line {
+  margin-bottom: 15px;
+}
+
+.program-label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+audio {
+  width: 100%;
+}
+</style>
