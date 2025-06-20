@@ -1,52 +1,120 @@
-<style>
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corpo da página */
 body {
-  font-family: sans-serif;
-  background: #f5f5f5;
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #ffffff;
   padding: 20px;
 }
 
+/* Container principal */
 .container {
-  max-width: 800px;
-  margin: auto;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 10px;
 }
 
+/* Botões de filtro (Lunch Break / Energia na Noite) */
 .buttons {
   display: flex;
   gap: 10px;
-  margin-bottom: 20px;
+  justify-content: center;
+  margin-bottom: 30px;
 }
 
-button {
+.buttons button {
   padding: 10px 20px;
-  border: 2px solid black;
-  background: white;
+  background-color: #333;
+  color: white;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  font-weight: bold;
   cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.buttons button.active {
+  background-color: #00e676;
+  color: #121212;
+  border-color: #00e676;
+}
+
+.buttons button:hover {
+  background-color: #555;
+}
+
+/* PLAYER GLOBAL */
+.global-player {
+  background-color: #1e1e1e;
+  padding: 16px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.global-player p {
+  margin-bottom: 10px;
   font-weight: bold;
 }
 
-button.active {
-  background: black;
-  color: white;
-}
-
+/* Semana */
 .week-group {
+  background-color: #1e1e1e;
   margin-bottom: 30px;
-  background: white;
   padding: 20px;
   border-radius: 10px;
-  border: 1px solid #ddd;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
 }
 
+.week-group h2 {
+  color: #66bb6a;
+  border-bottom: 1px solid #333;
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+  font-size: 1.3rem;
+}
+
+/* Cada item da lista */
 .program-line {
-  margin-bottom: 15px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .program-label {
-  font-weight: bold;
-  margin-bottom: 5px;
+  font-size: 1rem;
+  font-weight: 500;
 }
 
+/* Botão "Ouvir" */
+.play-button {
+  padding: 6px 14px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 8px;
+}
+
+.play-button:hover {
+  background-color: #00e676;
+  color: black;
+}
+
+/* Player de áudio */
 audio {
   width: 100%;
+  max-width: 100%;
+  outline: none;
+  margin-top: 10px;
 }
-</style>
